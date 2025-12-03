@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags -->
+    <title>About Joseph Mulei | The Marketer Who Codes</title>
+    <meta name="description" content="Read the story of Joseph Mulei, a Sales Executive turned Full-Stack Developer and Digital Strategist in Nairobi, Kenya.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Config (Matches Index) -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+              serif: ['Instrument Serif', 'serif'],
+            },
+            colors: {
+              brand: {
+                950: '#050505', 
+                900: '#0F1115',
+                800: '#1A1D23',
+                500: '#3B82F6', 
+                400: '#60A5FA',
+              }
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      body {
+        background-color: #050505;
+        color: #f8fafc;
+        overflow-x: hidden;
+      }
+      
+      .glass-card {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .gradient-text {
+        background: linear-gradient(to right, #fff 20%, #60A5FA 80%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-brand-950/70 backdrop-blur-xl">
+      <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+        <a href="index.html" class="font-bold text-xl tracking-tighter hover:opacity-80 transition">JM<span class="text-brand-500">.</span></a>
+        
+        <div class="hidden md:flex gap-8 text-sm font-medium text-gray-400 items-center">
+          <a href="about.html" class="text-white">About</a>
+          <a href="index.html#work" class="hover:text-white transition-colors">Projects</a>
+          <a href="index.html#timeline" class="hover:text-white transition-colors">Experience</a>
+        </div>
+
+        <div class="hidden md:flex gap-3">
+            <a href="Joseph_Mulei_CV.pdf" download class="flex items-center gap-2 border border-white/20 px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-white/10 transition-colors group">
+               <i data-lucide="download" class="w-4 h-4 text-gray-400 group-hover:text-white transition-colors"></i> Resume
+            </a>
+            <a href="index.html#contact" class="bg-white text-black px-5 py-2 rounded-full text-sm font-bold hover:scale-105 transition-transform">
+               Hire Me
+            </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="pt-32 pb-20 max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="reveal">
+                <div class="inline-block px-3 py-1 mb-6 border border-brand-500/30 rounded-full bg-brand-500/10">
+                    <span class="text-xs font-mono text-brand-400 uppercase tracking-widest">The Backstory</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold tracking-tighter mb-6">
+                    I learned to <span class="gradient-text">Sell</span> <br/>
+                    <span class="font-serif italic font-normal text-gray-400">before I learned to Code.</span>
+                </h1>
+                <p class="text-xl text-gray-400 leading-relaxed mb-8">
+                    Most developers build what they are told. I build what sells. 
+                    <br/><br/>
+                    My journey started in executive sales at Kenindia Assurance, not a computer lab. That experience taught me one crucial lesson: <strong>Technology is useless if it doesn't solve a human problem.</strong>
+                </p>
+                <div class="flex gap-4">
+                     <div class="flex items-center gap-2 text-sm text-gray-300">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-brand-500"></i> Nairobi, Kenya
+                     </div>
+                     <div class="flex items-center gap-2 text-sm text-gray-300">
+                        <i data-lucide="globe" class="w-4 h-4 text-brand-500"></i> Open to Relocation
+                     </div>
+                </div>
+            </div>
+
+            <div class="relative reveal delay-100">
+                <!-- Replace with your Real Image -->
+                <div class="aspect-[4/5] rounded-2xl overflow-hidden relative grayscale hover:grayscale-0 transition duration-700">
+                    <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1000&auto=format" alt="Joseph working" class="object-cover w-full h-full">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-950 via-transparent to-transparent"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy / Stats Section -->
+    <section class="py-20 bg-brand-900/30 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Card 1 -->
+                <div class="glass-card p-8 rounded-2xl reveal">
+                    <i data-lucide="trending-up" class="w-10 h-10 text-brand-500 mb-6"></i>
+                    <h3 class="text-xl font-bold text-white mb-3">ROI Obsessed</h3>
+                    <p class="text-gray-400 text-sm">
+                        I don't care about "clean code" if it doesn't convert. My background in Marketing (Second Class Upper) ensures every pixel serves a business goal.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-card p-8 rounded-2xl reveal delay-100">
+                    <i data-lucide="code-2" class="w-10 h-10 text-brand-500 mb-6"></i>
+                    <h3 class="text-xl font-bold text-white mb-3">Full Stack Capable</h3>
+                    <p class="text-gray-400 text-sm">
+                        From designing the UI in Figma to writing the React components and optimizing the SEO meta tags. I own the entire production pipeline.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-card p-8 rounded-2xl reveal delay-200">
+                    <i data-lucide="users" class="w-10 h-10 text-brand-500 mb-6"></i>
+                    <h3 class="text-xl font-bold text-white mb-3">Founder Mentality</h3>
+                    <p class="text-gray-400 text-sm">
+                        As the founder of SmartBizSystem, I understand the pressure of running a business. I treat your budget like it's my own.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Narrative Section -->
+    <section class="py-24 max-w-4xl mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-12 text-center reveal">The Evolution</h2>
+        
+        <div class="relative border-l border-white/10 ml-6 md:ml-0 space-y-16 reveal">
+            
+            <!-- Chapter 1 -->
+            <div class="relative pl-12 md:pl-20">
+                <span class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-gray-600"></span>
+                <span class="text-sm font-mono text-gray-500 mb-2 block">2021 - 2023</span>
+                <h3 class="text-2xl font-bold text-white mb-4">The Sales Trenches</h3>
+                <div class="glass-card p-6 rounded-xl">
+                    <p class="text-gray-400 leading-relaxed mb-4">
+                        Working as an <strong>Executive Sales Agent at Kenindia Assurance</strong> was my bootcamp. I faced rejection daily, learned negotiation, and understood that people don't buy products—they buy solutions to their fears.
+                    </p>
+                    <div class="flex gap-2">
+                        <span class="text-xs bg-white/5 px-2 py-1 rounded text-gray-400">Negotiation</span>
+                        <span class="text-xs bg-white/5 px-2 py-1 rounded text-gray-400">Client Relations</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chapter 2 -->
+            <div class="relative pl-12 md:pl-20">
+                <span class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-brand-500 shadow-[0_0_10px_#3B82F6]"></span>
+                <span class="text-sm font-mono text-brand-400 mb-2 block">2023 - 2024</span>
+                <h3 class="text-2xl font-bold text-white mb-4">The Pivot to Strategy</h3>
+                <div class="glass-card p-6 rounded-xl border-brand-500/20">
+                    <p class="text-gray-400 leading-relaxed mb-4">
+                        At <strong>Hallmark Institute</strong>, I moved from selling 1-on-1 to selling 1-to-many. As a Digital Marketing Strategist, I realized that manual sales didn't scale. I needed to learn how to build systems that sold while I slept.
+                    </p>
+                    <div class="flex gap-2">
+                        <span class="text-xs bg-brand-900 px-2 py-1 rounded text-brand-400 border border-brand-500/20">Digital Strategy</span>
+                        <span class="text-xs bg-brand-900 px-2 py-1 rounded text-brand-400 border border-brand-500/20">Campaign Mgmt</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chapter 3 -->
+            <div class="relative pl-12 md:pl-20">
+                <span class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-white"></span>
+                <span class="text-sm font-mono text-white mb-2 block">2024 - Present</span>
+                <h3 class="text-2xl font-bold text-white mb-4">The Founder & Builder</h3>
+                <div class="glass-card p-6 rounded-xl">
+                    <p class="text-gray-400 leading-relaxed mb-4">
+                        I taught myself to code because no-code tools weren't enough. I built <strong>SmartBizSystem</strong> and <strong>FamilyFutureKenya</strong> from scratch. Now, I offer this hybrid skill set—strategy + engineering—to forward-thinking companies.
+                    </p>
+                    <div class="flex gap-2">
+                        <span class="text-xs bg-white/5 px-2 py-1 rounded text-gray-400">React</span>
+                        <span class="text-xs bg-white/5 px-2 py-1 rounded text-gray-400">SEO</span>
+                        <span class="text-xs bg-white/5 px-2 py-1 rounded text-gray-400">AI Integration</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Personal / "Beyond Work" Section -->
+    <section class="py-24 bg-black border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-sm font-mono text-gray-500 mb-8 uppercase tracking-widest text-center">Beyond the Screen</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 reveal">
+                
+                <!-- Book -->
+                <div class="glass-card p-6 rounded-2xl flex flex-col items-center text-center">
+                    <i data-lucide="book-open" class="w-8 h-8 text-gray-500 mb-4"></i>
+                    <h4 class="font-bold text-white mb-2">Reading Now</h4>
+                    <p class="text-xs text-gray-400 italic">"Atomic Habits"</p>
+                    <p class="text-xs text-gray-500">by James Clear</p>
+                </div>
+
+                <!-- Music -->
+                <div class="glass-card p-6 rounded-2xl flex flex-col items-center text-center relative overflow-hidden">
+                    <div class="absolute inset-0 bg-green-500/5"></div>
+                    <i data-lucide="headphones" class="w-8 h-8 text-green-500 mb-4"></i>
+                    <h4 class="font-bold text-white mb-2">On Repeat</h4>
+                    <p class="text-xs text-gray-400">Afrobeats & Coding LoFi</p>
+                </div>
+
+                <!-- Goal -->
+                <div class="glass-card p-6 rounded-2xl flex flex-col items-center text-center">
+                    <i data-lucide="target" class="w-8 h-8 text-red-500 mb-4"></i>
+                    <h4 class="font-bold text-white mb-2">2025 Goal</h4>
+                    <p class="text-xs text-gray-400">Help 10 Kenyan Businesses</p>
+                    <p class="text-xs text-gray-500">Scale to 2x Revenue</p>
+                </div>
+
+                <!-- Connect -->
+                <div class="glass-card p-6 rounded-2xl flex flex-col items-center text-center border-brand-500/30 bg-brand-900/20">
+                    <i data-lucide="coffee" class="w-8 h-8 text-brand-400 mb-4"></i>
+                    <h4 class="font-bold text-white mb-2">Let's Chat</h4>
+                    <a href="mailto:Josephmulei1999@gmail.com" class="text-xs text-brand-400 hover:underline">Josephmulei1999@gmail.com</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/10 text-center">
+        <a href="index.html" class="inline-block bg-white text-black px-8 py-3 rounded-full font-bold text-sm hover:scale-105 transition-transform">
+            &larr; Back to Home
+        </a>
+        <div class="mt-8 text-xs text-gray-600">
+            &copy; 2025 Joseph Mulei.
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+       lucide.createIcons();
+
+       // Scrollytelling
+       const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+             if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+             }
+          });
+       }, { threshold: 0.1 });
+
+       document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
