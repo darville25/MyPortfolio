@@ -3,8 +3,20 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Joseph Mulei | Founder & Digital Strategist</title>
     
+    <!-- SEO & Social Media Meta Tags -->
+    <title>Joseph Mulei | Digital Marketer & Developer | Nairobi, Kenya</title>
+    <meta name="description" content="Portfolio of Joseph Mulei. A hybrid Digital Marketer and Web Developer based in Nairobi. Expert in SEO, Google Analytics, and React development for business growth.">
+    <meta name="keywords" content="Joseph Mulei, Digital Marketer Kenya, Web Developer Nairobi, SEO Specialist, SmartBizSystem, Kenindia Assurance">
+    <meta name="author" content="Joseph Mulei">
+
+    <!-- Open Graph / LinkedIn / WhatsApp Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/"> <!-- Replace with actual URL later -->
+    <meta property="og:title" content="Joseph Mulei | Growth Engineer">
+    <meta property="og:description" content="I bridge the gap between technical code and marketing strategy. View my case studies and resume.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -99,19 +111,34 @@
 </head>
 <body class="antialiased">
 
-    <!-- Navbar -->
+    <!-- Navbar with Resume Download -->
     <nav class="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-brand-950/70 backdrop-blur-xl">
       <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
         <div class="font-bold text-xl tracking-tighter">JM<span class="text-brand-500">.</span></div>
-        <div class="hidden md:flex gap-8 text-sm font-medium text-gray-400">
+        
+        <div class="hidden md:flex gap-8 text-sm font-medium text-gray-400 items-center">
           <a href="#about" class="hover:text-white transition-colors">About</a>
           <a href="#work" class="hover:text-white transition-colors">Projects</a>
           <a href="#timeline" class="hover:text-white transition-colors">Experience</a>
           <a href="#process" class="hover:text-white transition-colors">AI Tools</a>
         </div>
-        <a href="#contact" class="hidden md:block bg-white text-black px-5 py-2 rounded-full text-sm font-bold hover:scale-105 transition-transform">
-          Contact Me
-        </a>
+
+        <!-- JOB SEARCH UPDATE: Dual Buttons -->
+        <div class="hidden md:flex gap-3">
+            <!-- Resume Button -->
+            <a href="Joseph_Mulei_CV.pdf" download class="flex items-center gap-2 border border-white/20 px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-white/10 transition-colors group">
+               <i data-lucide="download" class="w-4 h-4 text-gray-400 group-hover:text-white transition-colors"></i> Resume
+            </a>
+            <!-- CTA Button -->
+            <a href="#contact" class="bg-white text-black px-5 py-2 rounded-full text-sm font-bold hover:scale-105 transition-transform">
+               Hire Me
+            </a>
+        </div>
+
+        <!-- Mobile Menu Button (Icon only) -->
+        <div class="md:hidden text-white">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+        </div>
       </div>
     </nav>
 
@@ -126,9 +153,17 @@
       </div>
 
       <div class="relative z-10 max-w-5xl mx-auto px-4 text-center">
+        <!-- JOB SEARCH UPDATE: Availability Text -->
         <div class="inline-block px-3 py-1 mb-6 border border-white/20 rounded-full bg-white/5 backdrop-blur-sm reveal">
-           <span class="text-xs uppercase tracking-widest text-brand-400">Founder & Marketer</span>
+           <span class="text-xs uppercase tracking-widest text-brand-400 flex items-center gap-2">
+             <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+             </span>
+             Open to Full-Time Roles & Consulting
+           </span>
         </div>
+
         <h1 class="text-6xl md:text-8xl font-serif italic tracking-tight mb-2 reveal" style="transition-delay: 100ms">
           Smart Business
         </h1>
@@ -155,18 +190,28 @@
       
       <div class="bento-grid">
         
-        <!-- 1. PERSONAL PICTURE & INFO -->
+        <!-- 1. PERSONAL PICTURE & INFO (Updated) -->
         <div class="bento-col-2 bento-row-3 glass-card rounded-3xl p-0 overflow-hidden relative group reveal">
-            <!-- REPLACE THE SRC BELOW WITH YOUR REAL IMAGE -->
+            <!-- REPLACE WITH YOUR IMAGE -->
             <img src="/images/joseph.jpg" 
                  alt="Joseph Mulei" 
                  class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition duration-700">
             
+            <!-- JOB SEARCH UPDATE: Pulse Badge -->
+            <div class="absolute top-4 right-4 bg-black/60 backdrop-blur-md border border-green-500/30 px-3 py-1 rounded-full flex items-center gap-2 z-10">
+                <span class="relative flex h-2 w-2">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                </span>
+                <span class="text-[10px] font-bold text-green-400 uppercase tracking-wide">Open to Work</span>
+            </div>
+
             <div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black via-brand-950/90 to-transparent">
                 <h3 class="text-3xl font-bold text-white mb-2">Joseph Mulei</h3>
                 <p class="text-brand-400 text-sm font-mono mb-4 uppercase tracking-wider">
                     Marketer // Developer // Founder
                 </p>
+                <!-- JOB SEARCH UPDATE: Hybrid Expert Text -->
                 <div class="text-gray-300 text-sm leading-relaxed border-l-2 border-brand-500 pl-4">
                     "I bridge the gap that most agencies miss: <strong>Technical execution backed by strategic marketing principles.</strong> With a solid academic foundation in Marketing and proven field experience in sales, I build digital products that don't just work—they convert."
                 </div>
@@ -184,22 +229,34 @@
                 <p class="text-gray-400 text-sm mb-6">
                     An innovative platform helping businesses automate operations and sales.
                 </p>
-                <!-- INSERT YOUR LINK HERE -->
                 <a href="https://smartbiz-systems.vercel.app" target="_blank" class="inline-flex items-center gap-2 text-white font-bold hover:text-brand-400 transition-colors underline decoration-brand-500 underline-offset-4">
                     Visit Website <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
                 </a>
             </div>
         </div>
 
-        <!-- 3. THE STACK (Updated) -->
+        <!-- 3. THE STACK (Updated with Certifications) -->
         <div class="bento-col-2 bento-row-1 glass-card rounded-3xl p-8 flex flex-col justify-center reveal">
           <span class="text-xs text-gray-500 uppercase mb-4 tracking-wider">Technical & Marketing Stack</span>
-          <div class="flex flex-wrap gap-2">
+          <div class="flex flex-wrap gap-2 mb-4">
             <span class="px-3 py-1.5 bg-brand-800 rounded-lg border border-white/10 text-xs font-mono text-white">Search Engine Optimization (SEO)</span>
             <span class="px-3 py-1.5 bg-brand-800 rounded-lg border border-white/10 text-xs font-mono text-white">Google Analytics</span>
             <span class="px-3 py-1.5 bg-brand-800 rounded-lg border border-white/10 text-xs font-mono text-white">Web Development</span>
             <span class="px-3 py-1.5 bg-brand-800 rounded-lg border border-white/10 text-xs font-mono text-white">Digital Marketing</span>
             <span class="px-3 py-1.5 bg-brand-800 rounded-lg border border-white/10 text-xs font-mono text-white">React / Next.js</span>
+          </div>
+          
+          <!-- JOB SEARCH UPDATE: Certification Icons -->
+          <div class="mt-2 pt-4 border-t border-white/10">
+            <span class="text-[10px] text-gray-500 uppercase tracking-wider mb-2 block">Tools & Certifications</span>
+            <div class="flex gap-4 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+                <!-- Google Analytics -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/w/w8/Google_Analytics_icon_%282019%29.svg" title="Google Analytics" class="w-6 h-6" alt="GA4"> 
+                <!-- React -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" title="React Developer" class="w-6 h-6" alt="React">
+                <!-- Hubspot (Example) -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/HubSpot_Logo_2020.svg" title="HubSpot Marketing" class="w-6 h-6 object-contain" alt="HubSpot">
+            </div>
           </div>
         </div>
 
@@ -240,7 +297,7 @@
             <h3 class="text-3xl md:text-4xl font-bold mb-6">Insurance for All Kenyans</h3>
             
             <p class="text-lg text-gray-300 mb-6 leading-relaxed">
-                I created a comprehensive website where all Kenyans can easily access, compare, and get insurance policies. This platform democratizes access to financial security.
+                I created a comprehensive website where all Kenyans can easily access, compare, and get insurance policies. This platform democratizes access to financial security using modern web technologies.
             </p>
 
             <div class="space-y-4">
