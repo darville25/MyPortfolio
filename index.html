@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joseph Mulei | Digital Growth Partner 2025</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+              serif: ['Instrument Serif', 'serif'], // Trending font for 2025
+            },
+            colors: {
+              brand: {
+                950: '#050505', // True Black for higher contrast
+                900: '#0F1115',
+                800: '#1A1D23',
+                500: '#3B82F6', // Cobalt Blue (2025 Trend)
+                400: '#60A5FA',
+                accent: '#F43F5E', // Energetic pop
+              }
+            },
+            animation: {
+              'spin-slow': 'spin 8s linear infinite',
+              'float': 'float 6s ease-in-out infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      body {
+        background-color: #050505;
+        color: #f8fafc;
+        overflow-x: hidden;
+      }
+      
+      /* 2025 Glassmorphism - Heavier blur, thinner borders */
+      .glass-card {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .gradient-text {
+        background: linear-gradient(to right, #fff 20%, #60A5FA 80%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* Scrollytelling Animation Classes */
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Bento Grid Helper */
+      .bento-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+      }
+      @media (min-width: 768px) {
+        .bento-grid {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 160px);
+        }
+        .bento-col-2 { grid-column: span 2; }
+        .bento-row-2 { grid-row: span 2; }
+      }
+
+      /* Hide scrollbar */
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Fixed Navbar with Blur -->
+    <nav class="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-brand-950/70 backdrop-blur-xl">
+      <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+        <div class="font-bold text-xl tracking-tighter">JM<span class="text-brand-500">.</span></div>
+        <div class="hidden md:flex gap-8 text-sm font-medium text-gray-400">
+          <a href="#work" class="hover:text-white transition-colors">Case Studies</a>
+          <a href="#process" class="hover:text-white transition-colors">The Process</a>
+          <a href="#about" class="hover:text-white transition-colors">About</a>
+        </div>
+        <a href="#contact" class="hidden md:block bg-white text-black px-5 py-2 rounded-full text-sm font-bold hover:scale-105 transition-transform">
+          Start Project
+        </a>
+      </div>
+    </nav>
+
+    <!-- FEATURE 1: VIDEO SHOWREEL HERO -->
+    <!-- Replaces static image with high-energy loop -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+      <!-- Video Background Overlay -->
+      <div class="absolute inset-0 z-0">
+         <!-- Placeholder video - in production use your own showreel -->
+         <video autoplay loop muted playsinline class="w-full h-full object-cover opacity-30 grayscale">
+            <source src="https://videos.pexels.com/video-files/3129671/3129671-uhd_2560_1440_24fps.mp4" type="video/mp4">
+         </video>
+         <div class="absolute inset-0 bg-gradient-to-t from-brand-950 via-brand-950/80 to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-5xl mx-auto px-4 text-center">
+        <div class="inline-block px-3 py-1 mb-6 border border-white/20 rounded-full bg-white/5 backdrop-blur-sm reveal">
+           <span class="text-xs uppercase tracking-widest text-brand-400">Available for 2025 Projects</span>
+        </div>
+        <h1 class="text-6xl md:text-8xl font-serif italic tracking-tight mb-2 reveal" style="transition-delay: 100ms">
+          Digital Growth
+        </h1>
+        <h1 class="text-6xl md:text-8xl font-bold tracking-tighter mb-8 gradient-text reveal" style="transition-delay: 200ms">
+          Engineered.
+        </h1>
+        <p class="text-xl text-gray-400 max-w-xl mx-auto mb-10 reveal" style="transition-delay: 300ms">
+          I don't just design websites. I build outcome-driven digital ecosystems using SEO, Automation, and AI.
+        </p>
+        <div class="flex flex-col md:flex-row gap-4 justify-center reveal" style="transition-delay: 400ms">
+           <a href="#work" class="px-8 py-4 bg-brand-500 hover:bg-brand-400 text-white rounded-full font-medium transition-all hover:shadow-[0_0_40px_rgba(59,130,246,0.5)]">
+             View Case Studies
+           </a>
+           <a href="#about" class="px-8 py-4 border border-white/20 rounded-full hover:bg-white/5 transition-colors">
+             Meet Joseph
+           </a>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-500 text-xs animate-bounce">
+        <span>Scroll</span>
+        <i data-lucide="arrow-down" class="w-4 h-4"></i>
+      </div>
+    </section>
+
+    <!-- FEATURE 2: BENTO GRID (Personal Branding) -->
+    <!-- Organizes chaotic info into a clean, modern layout -->
+    <section id="about" class="py-24 max-w-7xl mx-auto px-4">
+      <h2 class="text-sm font-mono text-gray-500 mb-8 uppercase tracking-widest reveal">01 / The Profile</h2>
+      
+      <div class="bento-grid">
+        <!-- Main Card: Intro -->
+        <div class="bento-col-2 bento-row-2 glass-card rounded-3xl p-8 flex flex-col justify-between reveal">
+          <div>
+            <div class="w-16 h-16 bg-gradient-to-br from-brand-500 to-purple-600 rounded-2xl flex items-center justify-center text-2xl font-bold mb-6">JM</div>
+            <h3 class="text-3xl font-bold mb-4">Joseph Mulei</h3>
+            <p class="text-gray-400 leading-relaxed">
+              A hybrid Digital Marketer & Developer based in Nairobi. I bridge the gap between "looking good" and "selling hard." While others focus on vanity metrics, I focus on the bottom line.
+            </p>
+          </div>
+          <div class="flex gap-4 mt-8">
+            <a href="#" class="p-2 bg-white/5 rounded-full hover:bg-white/20 transition"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+            <a href="#" class="p-2 bg-white/5 rounded-full hover:bg-white/20 transition"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+            <a href="#" class="p-2 bg-white/5 rounded-full hover:bg-white/20 transition"><i data-lucide="github" class="w-5 h-5"></i></a>
+          </div>
+        </div>
+
+        <!-- Tech Stack -->
+        <div class="glass-card rounded-3xl p-6 flex flex-col justify-center reveal">
+          <span class="text-xs text-gray-500 uppercase mb-4">The Stack</span>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-brand-900 rounded border border-white/10 text-xs">React</span>
+            <span class="px-3 py-1 bg-brand-900 rounded border border-white/10 text-xs">Next.js</span>
+            <span class="px-3 py-1 bg-brand-900 rounded border border-white/10 text-xs">Python</span>
+            <span class="px-3 py-1 bg-brand-900 rounded border border-white/10 text-xs">Google Ads</span>
+          </div>
+        </div>
+
+        <!-- Location/Map -->
+        <div class="glass-card rounded-3xl overflow-hidden relative group reveal">
+           <img src="https://maps.googleapis.com/maps/api/staticmap?center=Nairobi,Kenya&zoom=13&size=400x400&sensor=false&key=YOUR_API_KEY_HERE" 
+                alt="Map Placeholder" 
+                class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-80 transition-opacity grayscale"
+                onerror="this.src='https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&w=1000&auto=format&fit=crop'"/>
+           <div class="absolute bottom-4 left-4 bg-black/80 backdrop-blur px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+             <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div> Nairobi, KE
+           </div>
+        </div>
+
+        <!-- Spotify / Vibe Check -->
+        <div class="glass-card rounded-3xl p-6 flex flex-col justify-between relative overflow-hidden reveal">
+           <div class="absolute right-0 top-0 w-32 h-32 bg-green-500/20 blur-[50px]"></div>
+           <i data-lucide="music" class="w-6 h-6 text-green-400"></i>
+           <div>
+             <div class="text-xs text-gray-500 mb-1">Coding Vibe</div>
+             <div class="font-bold text-sm truncate">Burna Boy - Big 7</div>
+             <div class="w-full h-1 bg-gray-700 mt-3 rounded-full overflow-hidden">
+               <div class="w-2/3 h-full bg-green-500"></div>
+             </div>
+           </div>
+        </div>
+
+        <!-- KPI Card -->
+        <div class="bento-col-2 glass-card rounded-3xl p-8 flex items-center justify-between reveal">
+           <div>
+             <div class="text-4xl font-bold text-white mb-1">400%</div>
+             <div class="text-sm text-gray-400">Avg. ROI for Clients</div>
+           </div>
+           <div class="h-16 w-px bg-white/10"></div>
+           <div>
+             <div class="text-4xl font-bold text-white mb-1">40+</div>
+             <div class="text-sm text-gray-400">Projects Shipped</div>
+           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURE 3: OUTCOME-DRIVEN CASE STUDIES -->
+    <!-- Moves away from "Gallery" to "Business Logic" -->
+    <section id="work" class="py-24 bg-brand-900/30 border-y border-white/5">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-sm font-mono text-gray-500 mb-16 uppercase tracking-widest reveal">02 / Selected Works</h2>
+
+        <!-- Case Study 1 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-32 items-center reveal">
+          <div class="order-2 lg:order-1">
+            <div class="flex items-center gap-3 mb-6">
+               <div class="w-10 h-10 rounded-full bg-orange-500/20 flex items-center justify-center text-orange-500">
+                  <i data-lucide="shield" class="w-5 h-5"></i>
+               </div>
+               <span class="text-xl font-bold">FamilyFutureKenya</span>
+            </div>
+            
+            <h3 class="text-3xl md:text-4xl font-bold mb-6">Simplifying Insurance for the Indian Diaspora</h3>
+            
+            <div class="space-y-6">
+              <div class="border-l-2 border-white/10 pl-6">
+                 <h4 class="text-xs text-gray-500 uppercase tracking-wider mb-2">The Conflict</h4>
+                 <p class="text-gray-300">Client was relying on word-of-mouth. Traffic was low, and lead qualification took 3 days manually.</p>
+              </div>
+              <div class="border-l-2 border-brand-500 pl-6 bg-brand-500/5 py-4 rounded-r-xl">
+                 <h4 class="text-xs text-brand-400 uppercase tracking-wider mb-2">The Solution</h4>
+                 <p class="text-gray-200">Built a Next.js site with dynamic SEO pages for "Best Life Insurance Kenya." Integrated a Zapier webhook to qualify leads instantly via WhatsApp.</p>
+              </div>
+            </div>
+
+            <div class="mt-8 flex gap-8">
+               <div>
+                  <div class="text-3xl font-bold text-white">45%</div>
+                  <div class="text-xs text-gray-500">Conversion Rate</div>
+               </div>
+               <div>
+                  <div class="text-3xl font-bold text-white">0h</div>
+                  <div class="text-xs text-gray-500">Manual Entry</div>
+               </div>
+            </div>
+          </div>
+          
+          <div class="order-1 lg:order-2 relative group">
+             <!-- Interactive visual representation -->
+             <div class="absolute -inset-1 bg-gradient-to-r from-orange-500 to-purple-600 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
+             <div class="relative bg-brand-900 border border-white/10 rounded-2xl overflow-hidden aspect-video">
+                <!-- Mockup Image -->
+                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=1000&auto=format" alt="Project" class="w-full h-full object-cover opacity-60 hover:scale-105 transition duration-700">
+                
+                <!-- Floating "Outcome" Badge -->
+                <div class="absolute bottom-6 left-6 bg-white text-black px-4 py-2 rounded-lg font-bold text-sm shadow-xl transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition duration-300 delay-100">
+                   🚀 Leads increased by 3x
+                </div>
+             </div>
+          </div>
+        </div>
+
+        <!-- Case Study 2 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center reveal">
+            <!-- Visual First on Desktop -->
+            <div class="relative group">
+               <div class="absolute -inset-1 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
+               <div class="relative bg-brand-900 border border-white/10 rounded-2xl overflow-hidden aspect-video">
+                  <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format" alt="Project" class="w-full h-full object-cover opacity-60 hover:scale-105 transition duration-700">
+               </div>
+            </div>
+
+            <div>
+              <div class="flex items-center gap-3 mb-6">
+                 <div class="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-500">
+                    <i data-lucide="building" class="w-5 h-5"></i>
+                 </div>
+                 <span class="text-xl font-bold">Kenindia Assurance</span>
+              </div>
+              
+              <h3 class="text-3xl md:text-4xl font-bold mb-6">Dominating Local SEO Rankings</h3>
+              
+              <div class="space-y-6">
+                <div class="border-l-2 border-white/10 pl-6">
+                   <h4 class="text-xs text-gray-500 uppercase tracking-wider mb-2">The Conflict</h4>
+                   <p class="text-gray-300">High ad spend with diminishing returns. Competitors were owning the organic keywords.</p>
+                </div>
+                <div class="border-l-2 border-brand-500 pl-6 bg-brand-500/5 py-4 rounded-r-xl">
+                   <h4 class="text-xs text-brand-400 uppercase tracking-wider mb-2">The Solution</h4>
+                   <p class="text-gray-200">Conducted a technical SEO audit. Rewrote content clusters targeting "Car Insurance Nairobi." Optimized Core Web Vitals for mobile users.</p>
+                </div>
+              </div>
+  
+              <div class="mt-8 flex gap-8">
+                 <div>
+                    <div class="text-3xl font-bold text-white text-green-400">#1</div>
+                    <div class="text-xs text-gray-500">Google Rank</div>
+                 </div>
+                 <div>
+                    <div class="text-3xl font-bold text-white">+40%</div>
+                    <div class="text-xs text-gray-500">Organic Traffic</div>
+                 </div>
+              </div>
+            </div>
+          </div>
+
+      </div>
+    </section>
+
+    <!-- FEATURE 4: AI DISCLOSURE & PROCESS -->
+    <!-- Shows technical competence, not just usage -->
+    <section id="process" class="py-24 max-w-5xl mx-auto px-4">
+       <div class="flex items-center justify-center gap-2 mb-4 reveal">
+          <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+          <span class="text-xs font-mono text-brand-400 uppercase">Process 2.0</span>
+       </div>
+       <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 reveal">
+          Human Strategy. <span class="text-gray-600">AI Speed.</span>
+       </h2>
+
+       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Step 1 -->
+          <div class="glass-card p-8 rounded-2xl border-t border-white/20 relative overflow-hidden group reveal">
+             <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition">
+                <i data-lucide="brain-circuit" class="w-16 h-16"></i>
+             </div>
+             <div class="text-4xl font-mono text-gray-700 mb-4">01</div>
+             <h3 class="text-xl font-bold mb-2">Deep Work</h3>
+             <p class="text-gray-400 text-sm">
+                I do the strategic thinking. Customer avatars, empathy mapping, and high-level architecture are 100% human-made.
+             </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="glass-card p-8 rounded-2xl border-t border-brand-500/50 relative overflow-hidden group reveal" style="transition-delay: 100ms">
+            <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition text-brand-500">
+               <i data-lucide="sparkles" class="w-16 h-16"></i>
+            </div>
+             <div class="text-4xl font-mono text-brand-900 mb-4">02</div>
+             <h3 class="text-xl font-bold mb-2 text-white">AI Acceleration</h3>
+             <p class="text-gray-400 text-sm">
+                I use custom LLM scripts (Gemini/GPT-4) to generate 50+ ad variations, write boilerplate code, and clean datasets instantly.
+             </p>
+             <div class="mt-4 inline-flex items-center text-xs text-brand-400 bg-brand-900/50 px-2 py-1 rounded">
+                <i data-lucide="zap" class="w-3 h-3 mr-1"></i> Saves 20h/week
+             </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="glass-card p-8 rounded-2xl border-t border-white/20 relative overflow-hidden group reveal" style="transition-delay: 200ms">
+            <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition">
+               <i data-lucide="rocket" class="w-16 h-16"></i>
+            </div>
+             <div class="text-4xl font-mono text-gray-700 mb-4">03</div>
+             <h3 class="text-xl font-bold mb-2">Execution</h3>
+             <p class="text-gray-400 text-sm">
+                Final polish, deployment, and A/B testing. I deliver faster than agencies because I don't start from zero.
+             </p>
+          </div>
+       </div>
+
+       <!-- The Interactive Terminal (Kept from previous, but styled cleaner) -->
+       <div class="mt-12 reveal">
+          <div class="bg-black border border-white/10 rounded-xl overflow-hidden font-mono text-sm shadow-2xl max-w-3xl mx-auto">
+             <div class="bg-[#1a1a1a] px-4 py-2 flex gap-2 border-b border-white/5">
+                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                <span class="ml-2 text-xs text-gray-500">ai-agent.js</span>
+             </div>
+             <div class="p-6 h-48 overflow-y-auto" id="terminal-output">
+                <div class="text-gray-500 mb-2"># Try the tool: Generate a localized ad hook</div>
+                <div class="flex gap-2">
+                   <span class="text-green-500">➜</span>
+                   <input type="text" id="ai-input" placeholder="e.g. Real Estate in Westlands" class="bg-transparent outline-none text-white w-full placeholder-gray-700">
+                </div>
+             </div>
+          </div>
+       </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="py-20 border-t border-white/10 mt-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-brand-500/5 blur-[100px]"></div>
+        <div class="max-w-7xl mx-auto px-4 text-center relative z-10">
+           <h2 class="text-5xl md:text-7xl font-bold tracking-tighter mb-8 reveal">
+             Let's scale your <br /><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-white">Revenue.</span>
+           </h2>
+           <a href="mailto:Josephmulei1999@gmail.com" class="inline-flex items-center gap-2 px-8 py-4 bg-white text-black rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-[0_0_20px_rgba(255,255,255,0.3)] reveal">
+              <i data-lucide="calendar"></i> Book Discovery Call
+           </a>
+           
+           <div class="mt-20 flex justify-between items-end text-sm text-gray-500">
+              <div class="text-left">
+                 <div class="text-white font-bold mb-1">Joseph Mulei</div>
+                 <p>Nairobi, Kenya</p>
+              </div>
+              <div>
+                 &copy; 2025
+              </div>
+           </div>
+        </div>
+    </footer>
+
+    <!-- Logic -->
+    <script>
+       // 1. Icon Init
+       lucide.createIcons();
+
+       // 2. Scrollytelling Logic (IntersectionObserver)
+       const observerOptions = {
+          threshold: 0.1,
+          rootMargin: "0px 0px -50px 0px"
+       };
+
+       const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+             if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+             }
+          });
+       }, observerOptions);
+
+       document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+       // 3. Simple AI Terminal Logic
+       const input = document.getElementById('ai-input');
+       const output = document.getElementById('terminal-output');
+
+       input.addEventListener('keypress', function (e) {
+          if (e.key === 'Enter') {
+             const val = this.value;
+             // Add User Line
+             const userLine = document.createElement('div');
+             userLine.className = "flex gap-2 mt-2";
+             userLine.innerHTML = `<span class="text-green-500">➜</span> <span class="text-white">${val}</span>`;
+             output.insertBefore(userLine, input.parentElement);
+
+             // Simulate AI Thinking
+             const loadingLine = document.createElement('div');
+             loadingLine.className = "text-brand-500 mt-2 animate-pulse";
+             loadingLine.innerText = "Generating hook...";
+             output.insertBefore(loadingLine, input.parentElement);
+             
+             this.value = '';
+
+             setTimeout(() => {
+                loadingLine.remove();
+                const response = document.createElement('div');
+                response.className = "text-gray-300 mt-2 mb-4 pl-5 border-l border-brand-500";
+                response.innerHTML = `Suggested Hook: "Stop guessing with ${val}. Start dominating the market today."`;
+                output.insertBefore(response, input.parentElement);
+                output.scrollTop = output.scrollHeight;
+             }, 1500);
+          }
+       });
+    </script>
+</body>
+</html>
