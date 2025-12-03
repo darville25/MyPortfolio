@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags -->
+    <title>Case Studies | Joseph Mulei</title>
+    <meta name="description" content="View the digital marketing and web development case studies of Joseph Mulei. Real results: SEO rankings, automated systems, and high-conversion websites.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+              serif: ['Instrument Serif', 'serif'],
+            },
+            colors: {
+              brand: {
+                950: '#050505', 
+                900: '#0F1115',
+                800: '#1A1D23',
+                500: '#3B82F6', 
+                400: '#60A5FA',
+              }
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      body {
+        background-color: #050505;
+        color: #f8fafc;
+        overflow-x: hidden;
+      }
+      
+      .glass-card {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .gradient-text {
+        background: linear-gradient(to right, #fff 20%, #60A5FA 80%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-brand-950/70 backdrop-blur-xl">
+      <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+        <a href="index.html" class="font-bold text-xl tracking-tighter hover:opacity-80 transition">JM<span class="text-brand-500">.</span></a>
+        
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex gap-8 text-sm font-medium text-gray-400 items-center">
+          <a href="about.html" class="hover:text-white transition-colors">About</a>
+          <a href="projects.html" class="text-white">Projects</a>
+          <a href="experience.html" class="hover:text-white transition-colors">Experience</a>
+        </div>
+
+        <!-- Desktop Actions -->
+        <div class="hidden md:flex gap-3">
+            <a href="Joseph_Mulei_CV.pdf" download class="flex items-center gap-2 border border-white/20 px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-white/10 transition-colors group">
+               <i data-lucide="download" class="w-4 h-4 text-gray-400 group-hover:text-white transition-colors"></i> Resume
+            </a>
+            <a href="index.html#contact" class="bg-white text-black px-5 py-2 rounded-full text-sm font-bold hover:scale-105 transition-transform">
+               Hire Me
+            </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white focus:outline-none z-50 relative p-2">
+            <i data-lucide="menu" class="w-7 h-7"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu Dropdown -->
+      <div id="mobile-menu" class="hidden absolute top-0 left-0 w-full h-screen bg-brand-950/95 backdrop-blur-xl flex flex-col items-center justify-center space-y-8 md:hidden transition-all duration-300">
+          <a href="index.html" class="mobile-link text-2xl font-bold text-gray-300 hover:text-white">Home</a>
+          <a href="about.html" class="mobile-link text-2xl font-bold text-gray-300 hover:text-white">About</a>
+          <a href="projects.html" class="mobile-link text-2xl font-bold text-white">Projects</a>
+          
+          <div class="w-16 h-1 bg-white/10 rounded-full my-4"></div>
+          
+          <a href="Joseph_Mulei_CV.pdf" download class="flex items-center gap-2 text-brand-400 text-lg font-medium">
+             <i data-lucide="download" class="w-5 h-5"></i> Download Resume
+          </a>
+          <a href="index.html#contact" class="mobile-link bg-white text-black px-8 py-3 rounded-full text-lg font-bold">
+             Hire Me
+          </a>
+      </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="pt-32 pb-20 max-w-7xl mx-auto px-4 text-center">
+        <div class="reveal">
+            <div class="inline-block px-3 py-1 mb-6 border border-brand-500/30 rounded-full bg-brand-500/10">
+                <span class="text-xs font-mono text-brand-400 uppercase tracking-widest">The Portfolio</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tighter mb-6">
+                Engineered for <span class="gradient-text">Growth.</span>
+            </h1>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                I don't just make things look pretty. I build systems that rank on Google, capture leads automatically, and streamline operations.
+            </p>
+        </div>
+    </section>
+
+    <!-- CASE STUDY 1: FamilyFutureKenya -->
+    <section class="py-20 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center reveal">
+                <!-- Text Content -->
+                <div class="order-2 lg:order-1">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-brand-400 font-mono text-xs uppercase tracking-widest">Web Development + Lead Gen</span>
+                        <div class="h-px w-8 bg-brand-500/50"></div>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">FamilyFutureKenya</h2>
+                    
+                    <div class="space-y-8">
+                        <!-- Challenge -->
+                        <div>
+                            <h3 class="text-sm text-gray-500 uppercase font-bold mb-2">The Challenge</h3>
+                            <p class="text-gray-400 leading-relaxed">
+                                The client (Insurance Niche) relied entirely on manual phone calls and word-of-mouth. There was no central place for customers to compare policies, leading to a long, high-friction sales cycle.
+                            </p>
+                        </div>
+                        
+                        <!-- Solution -->
+                        <div>
+                            <h3 class="text-sm text-gray-500 uppercase font-bold mb-2">The Solution</h3>
+                            <p class="text-gray-400 leading-relaxed">
+                                I built a custom platform that serves as an aggregator for insurance policies. I integrated a <strong>WhatsApp Automation API</strong> so when a user requests a quote, the sales agent gets a qualified lead instantly.
+                            </p>
+                        </div>
+
+                        <!-- Tech Stack -->
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-300 border border-white/10">React</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-300 border border-white/10">Node.js</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-300 border border-white/10">WhatsApp API</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 flex gap-6">
+                        <a href="#" class="inline-flex items-center gap-2 bg-brand-500 text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-brand-400 transition-colors">
+                            Visit Live Site <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Visual -->
+                <div class="order-1 lg:order-2 group relative">
+                     <div class="absolute -inset-2 bg-gradient-to-r from-orange-500 to-red-500 rounded-3xl opacity-20 group-hover:opacity-40 blur-xl transition duration-500"></div>
+                     <div class="relative rounded-2xl overflow-hidden border border-white/10 bg-brand-900 shadow-2xl">
+                         <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=1000&auto=format" alt="Family Future Kenya" class="w-full object-cover group-hover:scale-105 transition duration-700">
+                         
+                         <!-- Floating Result Badge -->
+                         <div class="absolute bottom-6 right-6 glass-card px-6 py-4 rounded-xl border-l-4 border-orange-500">
+                             <div class="text-xs text-gray-400 uppercase">Lead Conv.</div>
+                             <div class="text-2xl font-bold text-white">45% Increase</div>
+                         </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASE STUDY 2: SmartBizSystem -->
+    <section class="py-20 border-t border-white/5 bg-brand-900/20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center reveal">
+                <!-- Visual (Left on desktop) -->
+                <div class="group relative">
+                     <div class="absolute -inset-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-3xl opacity-20 group-hover:opacity-40 blur-xl transition duration-500"></div>
+                     <div class="relative rounded-2xl overflow-hidden border border-white/10 bg-brand-900 shadow-2xl">
+                         <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format" alt="SmartBiz System" class="w-full object-cover group-hover:scale-105 transition duration-700">
+                         
+                         <!-- Floating Result Badge -->
+                         <div class="absolute bottom-6 left-6 glass-card px-6 py-4 rounded-xl border-l-4 border-blue-500">
+                             <div class="text-xs text-gray-400 uppercase">Time Saved</div>
+                             <div class="text-2xl font-bold text-white">20 hrs/week</div>
+                         </div>
+                     </div>
+                </div>
+
+                <!-- Text Content -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-blue-400 font-mono text-xs uppercase tracking-widest">SaaS Product + Automation</span>
+                        <div class="h-px w-8 bg-blue-500/50"></div>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">SmartBizSystem</h2>
+                    
+                    <div class="space-y-8">
+                        <!-- Challenge -->
+                        <div>
+                            <h3 class="text-sm text-gray-500 uppercase font-bold mb-2">The Challenge</h3>
+                            <p class="text-gray-400 leading-relaxed">
+                                Small businesses in Kenya struggle with inventory management and customer follow-ups. Most software is too expensive or too complex for the local market context.
+                            </p>
+                        </div>
+                        
+                        <!-- Solution -->
+                        <div>
+                            <h3 class="text-sm text-gray-500 uppercase font-bold mb-2">The Solution</h3>
+                            <p class="text-gray-400 leading-relaxed">
+                                I founded and developed a lightweight SaaS tool tailored for Kenyan SMEs. It automates invoicing, tracks inventory, and sends SMS reminders to customers, all from a mobile-first interface.
+                            </p>
+                        </div>
+
+                        <!-- Tech Stack -->
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-300 border border-white/10">Next.js</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-300 border border-white/10">Firebase</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-300 border border-white/10">Stripe/M-Pesa</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 flex gap-6">
+                        <a href="https://smartbiz-systems.vercel.app" class="inline-flex items-center gap-2 bg-white text-black px-6 py-3 rounded-full font-bold text-sm hover:scale-105 transition-transform">
+                            View Product <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASE STUDY 3: Kenindia SEO -->
+    <section class="py-20 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center reveal">
+                <!-- Text Content -->
+                <div class="order-2 lg:order-1">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-green-400 font-mono text-xs uppercase tracking-widest">SEO Strategy + Content</span>
+                        <div class="h-px w-8 bg-green-500/50"></div>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Kenindia Assurance</h2>
+                    
+                    <div class="space-y-8">
+                        <!-- Challenge -->
+                        <div>
+                            <h3 class="text-sm text-gray-500 uppercase font-bold mb-2">The Challenge</h3>
+                            <p class="text-gray-400 leading-relaxed">
+                                The company was bleeding money on paid ads (PPC) with diminishing returns. They were invisible on Google for high-intent keywords like "Car Insurance Kenya."
+                            </p>
+                        </div>
+                        
+                        <!-- Solution -->
+                        <div>
+                            <h3 class="text-sm text-gray-500 uppercase font-bold mb-2">The Solution</h3>
+                            <p class="text-gray-400 leading-relaxed">
+                                I conducted a full technical SEO audit and executed a content strategy. We created topic clusters around insurance education, optimizing for local search intent.
+                            </p>
+                        </div>
+
+                        <!-- Tech Stack -->
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-300 border border-white/10">Google Analytics 4</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-300 border border-white/10">SEMrush</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-300 border border-white/10">Technical SEO</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 flex gap-8">
+                        <div>
+                            <div class="text-3xl font-bold text-white text-green-400">#1</div>
+                            <div class="text-xs text-gray-500">Google Rank</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-white">+40%</div>
+                            <div class="text-xs text-gray-500">Organic Traffic</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visual -->
+                <div class="order-1 lg:order-2 group relative">
+                     <div class="absolute -inset-2 bg-gradient-to-r from-green-500 to-teal-500 rounded-3xl opacity-20 group-hover:opacity-40 blur-xl transition duration-500"></div>
+                     <div class="relative rounded-2xl overflow-hidden border border-white/10 bg-brand-900 shadow-2xl">
+                         <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format" alt="SEO Dashboard" class="w-full object-cover group-hover:scale-105 transition duration-700">
+                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-24 max-w-4xl mx-auto px-4 text-center">
+        <h2 class="text-4xl md:text-5xl font-bold tracking-tighter mb-8 reveal">
+            Have a project in mind?
+        </h2>
+        <p class="text-gray-400 mb-10 text-lg reveal">
+            I'm currently accepting new projects for Q1 2025. Let's discuss how we can engineer growth for your business.
+        </p>
+        <div class="flex flex-col md:flex-row justify-center gap-6 reveal">
+            <a href="mailto:Josephmulei1999@gmail.com" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand-500 text-white rounded-full font-bold text-lg hover:bg-brand-400 transition-colors shadow-lg shadow-brand-500/20">
+               <i data-lucide="mail"></i> Email Me
+            </a>
+            <a href="https://wa.me/254740239241" class="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/20 text-white rounded-full font-bold text-lg hover:bg-white/10 transition-colors">
+               <i data-lucide="message-circle"></i> WhatsApp Me
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/10 text-center">
+        <div class="flex justify-center gap-6 mb-8">
+            <a href="#" class="text-gray-500 hover:text-white transition"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+            <a href="#" class="text-gray-500 hover:text-white transition"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+            <a href="#" class="text-gray-500 hover:text-white transition"><i data-lucide="github" class="w-5 h-5"></i></a>
+        </div>
+        <div class="text-xs text-gray-600">
+            &copy; 2025 Joseph Mulei.
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+       lucide.createIcons();
+
+       // Scrollytelling
+       const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+             if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+             }
+          });
+       }, { threshold: 0.1 });
+
+       document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+       // Mobile Menu Logic
+       const menuBtn = document.getElementById('mobile-menu-btn');
+       const mobileMenu = document.getElementById('mobile-menu');
+       const mobileLinks = document.querySelectorAll('.mobile-link');
+
+       if(menuBtn && mobileMenu) {
+           menuBtn.addEventListener('click', () => {
+               mobileMenu.classList.toggle('hidden');
+           });
+           mobileLinks.forEach(link => {
+               link.addEventListener('click', () => {
+                   mobileMenu.classList.add('hidden');
+               });
+           });
+       }
+    </script>
+</body>
+</html>

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags -->
+    <title>AI Agents & Automation | Joseph Mulei</title>
+    <meta name="description" content="Custom AI Agents, Chatbots, and Workflow Automations built by Joseph Mulei. Save 20+ hours a week with intelligent business systems.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+              serif: ['Instrument Serif', 'serif'],
+            },
+            colors: {
+              brand: {
+                950: '#050505', 
+                900: '#0F1115',
+                800: '#1A1D23',
+                500: '#3B82F6', 
+                400: '#60A5FA',
+                ai: '#A855F7', // Purple for AI
+              }
+            },
+            animation: {
+              'pulse-glow': 'pulse-glow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            keyframes: {
+              'pulse-glow': {
+                '0%, 100%': { opacity: '0.5' },
+                '50%': { opacity: '1' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      body {
+        background-color: #050505;
+        color: #f8fafc;
+        overflow-x: hidden;
+      }
+      
+      .glass-card {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .gradient-text-ai {
+        background: linear-gradient(to right, #A855F7 20%, #60A5FA 80%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Terminal Cursor Blink */
+      .cursor-blink {
+          animation: blink 1s step-end infinite;
+      }
+      @keyframes blink {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0; }
+      }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-brand-950/70 backdrop-blur-xl">
+      <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+        <a href="index.html" class="font-bold text-xl tracking-tighter hover:opacity-80 transition">JM<span class="text-brand-500">.</span></a>
+        
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex gap-8 text-sm font-medium text-gray-400 items-center">
+          <a href="about.html" class="hover:text-white transition-colors">About</a>
+          <a href="projects.html" class="hover:text-white transition-colors">Projects</a>
+          <a href="ai-tools.html" class="text-white">AI Tools</a>
+        </div>
+
+        <!-- Desktop Actions -->
+        <div class="hidden md:flex gap-3">
+            <a href="Joseph_Mulei_CV.pdf" download class="flex items-center gap-2 border border-white/20 px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-white/10 transition-colors group">
+               <i data-lucide="download" class="w-4 h-4 text-gray-400 group-hover:text-white transition-colors"></i> Resume
+            </a>
+            <a href="index.html#contact" class="bg-white text-black px-5 py-2 rounded-full text-sm font-bold hover:scale-105 transition-transform">
+               Hire Me
+            </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white focus:outline-none z-50 relative p-2">
+            <i data-lucide="menu" class="w-7 h-7"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu Dropdown -->
+      <div id="mobile-menu" class="hidden absolute top-0 left-0 w-full h-screen bg-brand-950/95 backdrop-blur-xl flex flex-col items-center justify-center space-y-8 md:hidden transition-all duration-300">
+          <a href="index.html" class="mobile-link text-2xl font-bold text-gray-300 hover:text-white">Home</a>
+          <a href="about.html" class="mobile-link text-2xl font-bold text-gray-300 hover:text-white">About</a>
+          <a href="projects.html" class="mobile-link text-2xl font-bold text-gray-300 hover:text-white">Projects</a>
+          <a href="ai-tools.html" class="mobile-link text-2xl font-bold text-white">AI Tools</a>
+          
+          <div class="w-16 h-1 bg-white/10 rounded-full my-4"></div>
+          
+          <a href="Joseph_Mulei_CV.pdf" download class="flex items-center gap-2 text-brand-400 text-lg font-medium">
+             <i data-lucide="download" class="w-5 h-5"></i> Download Resume
+          </a>
+          <a href="index.html#contact" class="mobile-link bg-white text-black px-8 py-3 rounded-full text-lg font-bold">
+             Hire Me
+          </a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 max-w-7xl mx-auto px-4 text-center relative">
+        <!-- Background Glow -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-brand-ai/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+        <div class="reveal relative z-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 mb-6 border border-brand-ai/30 rounded-full bg-brand-ai/10">
+                <i data-lucide="bot" class="w-3 h-3 text-brand-ai"></i>
+                <span class="text-xs font-mono text-purple-300 uppercase tracking-widest">The Future of Work</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tighter mb-6">
+                Hire an <span class="gradient-text-ai">AI Workforce</span> <br/>
+                <span class="font-serif italic font-normal text-gray-400">that never sleeps.</span>
+            </h1>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed mb-8">
+                I build custom AI Agents and Automations that handle customer support, qualify leads, and generate content 24/7.
+            </p>
+        </div>
+    </section>
+
+    <!-- The Three Pillars of Automation -->
+    <section class="py-20 border-y border-white/5 bg-brand-900/20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Pillar 1: AI Agents -->
+                <div class="glass-card p-8 rounded-2xl reveal hover:border-brand-ai/50 transition duration-500 group">
+                    <div class="w-12 h-12 bg-brand-ai/20 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="brain-circuit" class="w-6 h-6 text-brand-ai"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Intelligent Agents</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Custom chatbots trained on <em>your</em> business data. They can answer FAQs, book appointments, and onboard new clients on WhatsApp or your website.
+                    </p>
+                    <ul class="space-y-2 text-xs text-gray-500 font-mono">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-ai"></span> OpenAI / ChatGPT-4o</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-ai"></span> WhatsApp Business API</li>
+                    </ul>
+                </div>
+
+                <!-- Pillar 2: Workflow Automation -->
+                <div class="glass-card p-8 rounded-2xl reveal delay-100 hover:border-blue-500/50 transition duration-500 group">
+                    <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="zap" class="w-6 h-6 text-blue-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Workflow Automation</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Connect your apps so they talk to each other. When a lead fills a form, automatically add them to CRM, send a welcome email, and notify your team on Slack.
+                    </p>
+                    <ul class="space-y-2 text-xs text-gray-500 font-mono">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> Zapier / Make.com</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> Google Sheets Automation</li>
+                    </ul>
+                </div>
+
+                <!-- Pillar 3: Data & Scraping -->
+                <div class="glass-card p-8 rounded-2xl reveal delay-200 hover:border-green-500/50 transition duration-500 group">
+                    <div class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="database" class="w-6 h-6 text-green-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Data Scraping</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Automated scripts that gather market data, competitor pricing, or real estate listings from the web to give you a competitive edge.
+                    </p>
+                    <ul class="space-y-2 text-xs text-gray-500 font-mono">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-green-500"></span> Python (BeautifulSoup)</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-green-500"></span> Automated Reporting</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE DEMO SECTION -->
+    <section class="py-24 max-w-5xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center reveal">
+            
+            <!-- Description -->
+            <div>
+                <h2 class="text-4xl font-bold mb-6">Meet <span class="text-brand-ai">SmartBiz Agent</span></h2>
+                <p class="text-gray-400 mb-8 text-lg">
+                    This is a simplified version of the agents I build for clients. It can generate marketing angles, write emails, or suggest automation strategies.
+                </p>
+                
+                <div class="space-y-4">
+                    <div class="flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/5">
+                        <div class="w-8 h-8 rounded-full bg-purple-500/20 flex items-center justify-center shrink-0">1</div>
+                        <div>
+                            <h4 class="font-bold text-white">Context Aware</h4>
+                            <p class="text-sm text-gray-500">It understands Kenyan business context (M-Pesa, Local SEO).</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/5">
+                        <div class="w-8 h-8 rounded-full bg-purple-500/20 flex items-center justify-center shrink-0">2</div>
+                        <div>
+                            <h4 class="font-bold text-white">Instant Output</h4>
+                            <p class="text-sm text-gray-500">Generates usable copy in milliseconds.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Terminal UI -->
+            <div class="w-full">
+               <div class="bg-[#0c0c0c] rounded-xl overflow-hidden border border-white/10 shadow-2xl shadow-purple-900/20 font-mono text-sm">
+                  <!-- Terminal Header -->
+                  <div class="bg-[#1a1a1a] px-4 py-3 flex items-center justify-between border-b border-white/5">
+                     <div class="flex gap-1.5">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                     </div>
+                     <div class="text-xs text-gray-500">agent_v2.py</div>
+                  </div>
+  
+                  <!-- Terminal Body -->
+                  <div class="p-6 h-[400px] flex flex-col justify-between relative bg-black/50 backdrop-blur-sm">
+                     
+                     <div id="terminal-content" class="flex-1 overflow-y-auto space-y-4 no-scrollbar">
+                        <div class="text-purple-400">
+                           <span class="text-green-400">root@smartbiz:~#</span> ./init_agent.sh
+                           <br/>
+                           <span class="text-gray-500">> Loading Marketing Modules... Done.</span>
+                           <br/>
+                           <span class="text-gray-500">> Connecting to OpenAI API... Connected.</span>
+                           <br/>
+                           <span class="text-white mt-2">Hello! I am your AI Assistant. Ask me to write a cold email, a catchy headline, or an Instagram caption for your business.</span>
+                        </div>
+                     </div>
+  
+                     <!-- Input Area -->
+                     <div class="mt-4 pt-4 border-t border-white/10">
+                        <div class="flex gap-2">
+                           <span class="text-green-400 font-bold">></span>
+                           <input 
+                             id="ai-input"
+                             type="text" 
+                             placeholder='Type here (e.g. "Write an SMS for a shoe sale in Nairobi")'
+                             class="bg-transparent border-none outline-none text-white w-full placeholder-gray-600 focus:ring-0"
+                             autocomplete="off"
+                           />
+                           <button id="ai-submit" class="text-gray-400 hover:text-white transition-colors">
+                              <i data-lucide="send" class="w-4 h-4"></i>
+                           </button>
+                        </div>
+                     </div>
+  
+                  </div>
+               </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="py-20 bg-white/5">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-12 reveal">Why Automate?</h2>
+            
+            <div class="grid grid-cols-2 gap-8 reveal">
+                <!-- Old Way -->
+                <div class="text-center opacity-50">
+                    <h3 class="text-xl font-bold text-gray-400 mb-6">The Old Way</h3>
+                    <ul class="space-y-4 text-sm text-gray-500">
+                        <li class="flex flex-col items-center gap-2">
+                            <i data-lucide="clock" class="w-6 h-6"></i>
+                            Manual Data Entry (5hrs/week)
+                        </li>
+                        <li class="flex flex-col items-center gap-2">
+                            <i data-lucide="moon" class="w-6 h-6"></i>
+                            Missed leads at night
+                        </li>
+                        <li class="flex flex-col items-center gap-2">
+                            <i data-lucide="user-x" class="w-6 h-6"></i>
+                            Inconsistent replies
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- New Way -->
+                <div class="text-center relative">
+                    <div class="absolute inset-0 bg-brand-ai/10 blur-xl rounded-full"></div>
+                    <h3 class="text-xl font-bold text-white mb-6 relative z-10">The AI Way</h3>
+                    <ul class="space-y-4 text-sm text-white font-medium relative z-10">
+                        <li class="flex flex-col items-center gap-2">
+                            <i data-lucide="zap" class="w-6 h-6 text-brand-ai"></i>
+                            Instant Sync (0hrs/week)
+                        </li>
+                        <li class="flex flex-col items-center gap-2">
+                            <i data-lucide="bot" class="w-6 h-6 text-brand-ai"></i>
+                            24/7 Response Rate
+                        </li>
+                        <li class="flex flex-col items-center gap-2">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-brand-ai"></i>
+                            Perfect Accuracy
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="py-20 border-t border-white/10 mt-10 relative overflow-hidden">
+        <div class="absolute inset-0 bg-brand-ai/5 blur-[100px]"></div>
+        <div class="max-w-7xl mx-auto px-4 text-center relative z-10">
+           <h2 class="text-5xl md:text-7xl font-bold tracking-tighter mb-8 reveal">
+             Automate your <span class="text-brand-ai">Busy Work.</span>
+           </h2>
+           <div class="flex flex-col md:flex-row justify-center gap-6 reveal">
+               <a href="mailto:Josephmulei1999@gmail.com" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-black rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-[0_0_20px_rgba(255,255,255,0.3)]">
+                  <i data-lucide="calendar"></i> Book Automation Audit
+               </a>
+           </div>
+           
+           <div class="mt-20 flex justify-center text-xs text-gray-500">
+               &copy; 2025 Joseph Mulei.
+           </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+       lucide.createIcons();
+
+       // Scrollytelling
+       const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+             if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+             }
+          });
+       }, { threshold: 0.1 });
+
+       document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+       // Mobile Menu Logic
+       const menuBtn = document.getElementById('mobile-menu-btn');
+       const mobileMenu = document.getElementById('mobile-menu');
+       const mobileLinks = document.querySelectorAll('.mobile-link');
+
+       if(menuBtn && mobileMenu) {
+           menuBtn.addEventListener('click', () => {
+               mobileMenu.classList.toggle('hidden');
+           });
+           mobileLinks.forEach(link => {
+               link.addEventListener('click', () => {
+                   mobileMenu.classList.add('hidden');
+               });
+           });
+       }
+
+       // --- TERMINAL LOGIC ---
+       const aiInput = document.getElementById('ai-input');
+       const aiSubmit = document.getElementById('ai-submit');
+       const terminalContent = document.getElementById('terminal-content');
+
+       const appendToTerminal = (html) => {
+          const div = document.createElement('div');
+          div.innerHTML = html;
+          terminalContent.appendChild(div);
+          terminalContent.scrollTop = terminalContent.scrollHeight;
+       };
+
+       const handleGenerate = async () => {
+          const prompt = aiInput.value.trim();
+          if (!prompt) return;
+
+          // 1. User Input
+          aiInput.value = '';
+          appendToTerminal(`<div class="mt-4 flex gap-2"><span class="text-green-400 font-bold">></span> <span class="text-white">${prompt}</span></div>`);
+
+          // 2. Loading State
+          const loadingId = 'loading-' + Date.now();
+          appendToTerminal(`<div id="${loadingId}" class="text-brand-ai text-xs mt-2 animate-pulse">Processing request with smartbiz_model_v1...</div>`);
+
+          // 3. Simulated Response (In a real app, you'd fetch an API here)
+          setTimeout(() => {
+              document.getElementById(loadingId).remove();
+              
+              // Simple logic for demo purposes
+              let response = "";
+              if(prompt.toLowerCase().includes("sms")) {
+                  response = `Success! Here is a high-converting SMS draft:\n\n"Hey [Name], Flash Sale at [Business]! 50% OFF all sneakers this weekend only. Show this text for a free pair of socks. Valid at CBD branch."`;
+              } else if(prompt.toLowerCase().includes("email")) {
+                   response = `Draft Generated:\n\nSubject: Quick question about [Topic]\nHi [Name],\n\nI noticed you're looking for [Service]. We just helped a client in Nairobi achieve [Result]. Are you free for a 10-min chat?\n\nBest,\nJoseph`;
+              } else {
+                  response = `Strategy Generated: For "${prompt}", I recommend a 3-step automation:\n1. Facebook Lead Form -> Zapier\n2. Zapier -> Google Sheets (Backup)\n3. Zapier -> WhatsApp API (Instant Greeting).`;
+              }
+
+              appendToTerminal(`<div class="mt-2 text-gray-300 border-l-2 border-brand-ai pl-4 whitespace-pre-wrap font-mono text-xs leading-relaxed">${response}</div>`);
+              appendToTerminal(`<div class="mt-2 text-[10px] text-gray-600">Tokens used: 45 | Latency: 0.2s</div>`);
+          }, 1500);
+       };
+
+       aiSubmit.addEventListener('click', handleGenerate);
+       aiInput.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter') handleGenerate();
+       });
+
+    </script>
+</body>
+</html>

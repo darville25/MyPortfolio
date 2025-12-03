@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags -->
+    <title>Experience & Education | Joseph Mulei</title>
+    <meta name="description" content="Professional timeline of Joseph Mulei. From Executive Sales at Kenindia to Digital Strategist and Full-Stack Developer.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+              serif: ['Instrument Serif', 'serif'],
+            },
+            colors: {
+              brand: {
+                950: '#050505', 
+                900: '#0F1115',
+                800: '#1A1D23',
+                500: '#3B82F6', 
+                400: '#60A5FA',
+              }
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      body {
+        background-color: #050505;
+        color: #f8fafc;
+        overflow-x: hidden;
+      }
+      
+      .glass-card {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .gradient-text {
+        background: linear-gradient(to right, #fff 20%, #60A5FA 80%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-brand-950/70 backdrop-blur-xl">
+      <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+        <a href="index.html" class="font-bold text-xl tracking-tighter hover:opacity-80 transition">JM<span class="text-brand-500">.</span></a>
+        
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex gap-8 text-sm font-medium text-gray-400 items-center">
+          <a href="about.html" class="hover:text-white transition-colors">About</a>
+          <a href="projects.html" class="hover:text-white transition-colors">Projects</a>
+          <a href="experience.html" class="text-white">Experience</a>
+          <a href="ai-tools.html" class="hover:text-white transition-colors">AI Tools</a>
+        </div>
+
+        <!-- Desktop Actions -->
+        <div class="hidden md:flex gap-3">
+            <a href="Joseph_Mulei_CV.pdf" download class="flex items-center gap-2 border border-white/20 px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-white/10 transition-colors group">
+               <i data-lucide="download" class="w-4 h-4 text-gray-400 group-hover:text-white transition-colors"></i> Resume
+            </a>
+            <a href="index.html#contact" class="bg-white text-black px-5 py-2 rounded-full text-sm font-bold hover:scale-105 transition-transform">
+               Hire Me
+            </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white focus:outline-none z-50 relative p-2">
+            <i data-lucide="menu" class="w-7 h-7"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu Dropdown -->
+      <div id="mobile-menu" class="hidden absolute top-0 left-0 w-full h-screen bg-brand-950/95 backdrop-blur-xl flex flex-col items-center justify-center space-y-8 md:hidden transition-all duration-300">
+          <a href="index.html" class="mobile-link text-2xl font-bold text-gray-300 hover:text-white">Home</a>
+          <a href="about.html" class="mobile-link text-2xl font-bold text-gray-300 hover:text-white">About</a>
+          <a href="projects.html" class="mobile-link text-2xl font-bold text-gray-300 hover:text-white">Projects</a>
+          <a href="experience.html" class="mobile-link text-2xl font-bold text-white">Experience</a>
+          
+          <div class="w-16 h-1 bg-white/10 rounded-full my-4"></div>
+          
+          <a href="Joseph_Mulei_CV.pdf" download class="flex items-center gap-2 text-brand-400 text-lg font-medium">
+             <i data-lucide="download" class="w-5 h-5"></i> Download Resume
+          </a>
+          <a href="index.html#contact" class="mobile-link bg-white text-black px-8 py-3 rounded-full text-lg font-bold">
+             Hire Me
+          </a>
+      </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="pt-32 pb-20 max-w-7xl mx-auto px-4 text-center">
+        <div class="reveal">
+            <div class="inline-block px-3 py-1 mb-6 border border-brand-500/30 rounded-full bg-brand-500/10">
+                <span class="text-xs font-mono text-brand-400 uppercase tracking-widest">Career Chronicle</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tighter mb-6">
+                The Journey so <span class="gradient-text">Far.</span>
+            </h1>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                A non-traditional path from hard sales to high-tech. I learned to understand customers first, then built the technology to serve them.
+            </p>
+        </div>
+    </section>
+
+    <!-- MAIN TIMELINE -->
+    <section class="py-20 max-w-4xl mx-auto px-4">
+        
+        <!-- Vertical Line Container -->
+        <div class="relative border-l border-white/10 ml-6 md:ml-10 space-y-20">
+
+            <!-- 1. CURRENT ROLE (Founder) -->
+            <div class="relative pl-12 md:pl-20 reveal group">
+                <!-- Dot -->
+                <span class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-brand-500 shadow-[0_0_15px_#3B82F6] ring-4 ring-brand-950"></span>
+                
+                <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                    <div>
+                        <h2 class="text-3xl font-bold text-white">Founder & Lead Developer</h2>
+                        <h3 class="text-lg text-brand-400 font-medium">SmartBizSystem</h3>
+                    </div>
+                    <div class="mt-2 md:mt-0 px-3 py-1 bg-brand-500/10 border border-brand-500/20 rounded-full text-xs font-mono text-brand-400 w-fit">
+                        2024 - Present
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl border-brand-500/30">
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        Bootstrapped a SaaS platform helping Kenyan SMEs automate inventory and sales. I handle the entire product lifecycle—from writing the Next.js code to running the Google Ads campaigns.
+                    </p>
+                    
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="check" class="w-5 h-5 text-brand-500 shrink-0 mt-0.5"></i>
+                            <span class="text-sm text-gray-400">Developed a WhatsApp-first CRM reducing client admin time by 20 hours/week.</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="check" class="w-5 h-5 text-brand-500 shrink-0 mt-0.5"></i>
+                            <span class="text-sm text-gray-400">Integrated M-Pesa APIs for seamless local payments.</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="check" class="w-5 h-5 text-brand-500 shrink-0 mt-0.5"></i>
+                            <span class="text-sm text-gray-400">Executing a localized SEO strategy targeting "Inventory Systems Kenya".</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-black rounded border border-white/10 text-xs text-gray-400">Next.js</span>
+                        <span class="px-3 py-1 bg-black rounded border border-white/10 text-xs text-gray-400">Product Management</span>
+                        <span class="px-3 py-1 bg-black rounded border border-white/10 text-xs text-gray-400">Go-to-Market</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. FREELANCE/CONSULTANT -->
+            <div class="relative pl-12 md:pl-20 reveal group">
+                <span class="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-white ring-4 ring-brand-950"></span>
+                
+                <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                    <div>
+                        <h2 class="text-2xl font-bold text-white">Full-Stack Developer & SEO Consultant</h2>
+                        <h3 class="text-lg text-gray-400 font-medium">Freelance</h3>
+                    </div>
+                    <div class="mt-2 md:mt-0 text-xs font-mono text-gray-500">
+                        2023 - Present
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl">
+                    <p class="text-gray-400 leading-relaxed mb-4">
+                        Building high-performance websites for clients like <strong>FamilyFutureKenya</strong>. I focus on "Conversion-First Development"—writing code that is optimized for Google rankings and lead generation speed.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-white/5 rounded text-xs text-gray-400">SEO Audits</span>
+                        <span class="px-3 py-1 bg-white/5 rounded text-xs text-gray-400">Web Development</span>
+                        <span class="px-3 py-1 bg-white/5 rounded text-xs text-gray-400">Google Ads</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. HALLMARK INSTITUTE -->
+            <div class="relative pl-12 md:pl-20 reveal group">
+                <span class="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-gray-500 ring-4 ring-brand-950 group-hover:bg-white transition"></span>
+                
+                <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                    <div>
+                        <h2 class="text-2xl font-bold text-white">Digital Marketing Strategist</h2>
+                        <h3 class="text-lg text-gray-400 font-medium">Hallmark Institute</h3>
+                    </div>
+                    <div class="mt-2 md:mt-0 text-xs font-mono text-gray-500">
+                        2023 - 2024
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl">
+                    <p class="text-gray-400 leading-relaxed mb-4">
+                        Pivoted from sales to strategy. I was responsible for the digital presence of the institution, ensuring enrollment targets were met through online channels.
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 text-sm text-gray-400">
+                        <li>Managed social media campaigns that increased brand visibility by 30%.</li>
+                        <li>Analyzed student enrollment data to optimize marketing spend.</li>
+                        <li>Collaborated with design teams to create high-converting ad creatives.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 4. KENINDIA ASSURANCE -->
+            <div class="relative pl-12 md:pl-20 reveal group">
+                <span class="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-gray-500 ring-4 ring-brand-950 group-hover:bg-white transition"></span>
+                
+                <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                    <div>
+                        <h2 class="text-2xl font-bold text-white">Executive Sales Agent</h2>
+                        <h3 class="text-lg text-gray-400 font-medium">Kenindia Assurance</h3>
+                    </div>
+                    <div class="mt-2 md:mt-0 text-xs font-mono text-gray-500">
+                        2021 - 2023
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl">
+                    <p class="text-gray-400 leading-relaxed mb-4">
+                        The foundation of my career. This role taught me resilience and the psychology of selling.
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 text-sm text-gray-400">
+                        <li>Consistent top performer in cold outreach and lead conversion.</li>
+                        <li>Managed a portfolio of high-net-worth clients.</li>
+                        <li>Developed a deep understanding of the financial/insurance sector (which I now build software for).</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section class="py-20 border-t border-white/5 bg-brand-900/20">
+        <div class="max-w-4xl mx-auto px-4">
+             <h2 class="text-sm font-mono text-gray-500 mb-12 uppercase tracking-widest text-center reveal">Education</h2>
+
+             <div class="glass-card p-8 rounded-2xl flex flex-col md:flex-row gap-8 items-center reveal hover:border-brand-500/50 transition duration-500">
+                 <div class="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center shrink-0">
+                     <i data-lucide="graduation-cap" class="w-8 h-8 text-white"></i>
+                 </div>
+                 <div class="text-center md:text-left">
+                     <h3 class="text-2xl font-bold text-white">Bachelor's Degree in Marketing</h3>
+                     <p class="text-brand-400 font-medium mb-2">Second Class Upper Division</p>
+                     <p class="text-gray-400 text-sm leading-relaxed max-w-xl">
+                        A rigorous academic foundation that provided the theoretical frameworks for consumer behavior, market research, and strategic planning. I now apply these theories to code and automation.
+                     </p>
+                 </div>
+             </div>
+        </div>
+    </section>
+
+    <!-- SKILLS MATRIX -->
+    <section class="py-20 max-w-5xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-16 reveal">The Hybrid Toolkit</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 reveal">
+            <!-- Marketing Skills -->
+            <div class="glass-card p-8 rounded-2xl">
+                <div class="flex items-center gap-3 mb-6">
+                    <i data-lucide="megaphone" class="w-6 h-6 text-orange-400"></i>
+                    <h3 class="text-xl font-bold">Marketing & Strategy</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-2 bg-white/5 rounded text-sm text-gray-300">SEO (Technical & Local)</span>
+                    <span class="px-3 py-2 bg-white/5 rounded text-sm text-gray-300">Google Analytics 4</span>
+                    <span class="px-3 py-2 bg-white/5 rounded text-sm text-gray-300">Copywriting</span>
+                    <span class="px-3 py-2 bg-white/5 rounded text-sm text-gray-300">Sales Funnel Design</span>
+                    <span class="px-3 py-2 bg-white/5 rounded text-sm text-gray-300">CRM Management</span>
+                    <span class="px-3 py-2 bg-white/5 rounded text-sm text-gray-300">Email Marketing</span>
+                </div>
+            </div>
+
+            <!-- Dev Skills -->
+            <div class="glass-card p-8 rounded-2xl">
+                <div class="flex items-center gap-3 mb-6">
+                    <i data-lucide="code-2" class="w-6 h-6 text-brand-500"></i>
+                    <h3 class="text-xl font-bold">Development & AI</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-2 bg-brand-900 rounded text-sm text-brand-100 border border-brand-500/20">React / Next.js</span>
+                    <span class="px-3 py-2 bg-brand-900 rounded text-sm text-brand-100 border border-brand-500/20">Tailwind CSS</span>
+                    <span class="px-3 py-2 bg-brand-900 rounded text-sm text-brand-100 border border-brand-500/20">Python (Automation)</span>
+                    <span class="px-3 py-2 bg-brand-900 rounded text-sm text-brand-100 border border-brand-500/20">OpenAI API</span>
+                    <span class="px-3 py-2 bg-brand-900 rounded text-sm text-brand-100 border border-brand-500/20">Zapier / Make</span>
+                    <span class="px-3 py-2 bg-brand-900 rounded text-sm text-brand-100 border border-brand-500/20">Git / GitHub</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/10 text-center">
+        <div class="flex justify-center gap-6 mb-8">
+            <a href="#" class="text-gray-500 hover:text-white transition"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+            <a href="#" class="text-gray-500 hover:text-white transition"><i data-lucide="github" class="w-5 h-5"></i></a>
+            <a href="mailto:Josephmulei1999@gmail.com" class="text-gray-500 hover:text-white transition"><i data-lucide="mail" class="w-5 h-5"></i></a>
+        </div>
+        <div class="text-xs text-gray-600">
+            &copy; 2025 Joseph Mulei.
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+       lucide.createIcons();
+
+       // Scrollytelling
+       const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+             if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+             }
+          });
+       }, { threshold: 0.1 });
+
+       document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+       // Mobile Menu Logic
+       const menuBtn = document.getElementById('mobile-menu-btn');
+       const mobileMenu = document.getElementById('mobile-menu');
+       const mobileLinks = document.querySelectorAll('.mobile-link');
+
+       if(menuBtn && mobileMenu) {
+           menuBtn.addEventListener('click', () => {
+               mobileMenu.classList.toggle('hidden');
+           });
+           mobileLinks.forEach(link => {
+               link.addEventListener('click', () => {
+                   mobileMenu.classList.add('hidden');
+               });
+           });
+       }
+    </script>
+</body>
+</html>
